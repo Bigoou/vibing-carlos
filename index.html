@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/hand-pose-detection"></script>
+    <!-- Optional: Include below scripts if you want to use MediaPipe runtime. -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands"> </script> 
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils@0.1/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils@0.1/control_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils@0.2/drawing_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands@0.1/hands.js" crossorigin="anonymous"></script>
+    <!-- Load the Paper.js library -->
+    <script type="text/javascript" src="./paper-full.js"></script>
+    <!-- Load external PaperScript and associate it with myCanvas -->
+    <script type="text/paperscript" src="./main.js" canvas="myCanvas"></script>
+    <script type="text/paperscript" src="./front.js" canvas="canvasFront"></script>
+
+</head>
+
+<body>
+    <img class="spaceship" src="./Y3in.gif" alt="">
+    <!-- <button id="toggle-btn">Play</button> -->
+    <div style="display : none" class="column">
+        <article class="panel is-info">
+          <p class="panel-heading">
+            Webcam Input
+          </p>
+          <div class="panel-block">
+            <video class="input_video3"></video>
+          </div>
+        </article>
+      </div>
+      <div class="webcam">
+          <div class="panel-block">
+            <canvas class="output3" width="200px" height="200px"></canvas>
+          </div>
+      </div>
+    </div>
+    <div style="visibility: hidden;" class="control3">
+    </div>
+    <canvas id="canvasFront" resize></canvas>
+    <canvas id="myCanvas" resize></canvas>
+    <script type="module" src="./tensor.js"></script>
+</body>
+
+</html>
